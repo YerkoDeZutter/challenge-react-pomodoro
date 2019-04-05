@@ -2,7 +2,7 @@
   "name": "challenge-react-pomodoro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yerkodezutter.github.io/challenge-react-pomodoro/",
+  "homepage": "https://yerkodezutter.github.io/challenge-react-pomodoro",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
