@@ -90,10 +90,10 @@ class App extends Component {
 
 // curent change (set) counter
 
-changeC = (e) => {
-  let curMin = this.state.min
-  e.target.value === '+' ? curMin < 99 ? this.setState({min: curMin + 1}) : this.setState({min: curMin}) : curMin > 1 ? this.setState({min: curMin - 1}) : this.setState({min: curMin})
-}
+  changeC = (e) => {
+    let curMin = this.state.min
+    e.target.value === '+' ? curMin < 99 ? this.setState({min: curMin + 1}) : this.setState({min: curMin}) : curMin > 1 ? this.setState({min: curMin - 1}) : this.setState({min: curMin})
+  }
 
 
   render() {
