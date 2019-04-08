@@ -2,28 +2,44 @@ import React, { Component } from 'react';
 
 class App extends Component {
 
+  // set first state
+
   state = {
     min: 1,
     sec: 0,
     button: 'play'
   }
 
-  setC = (e) => {
-    this.setState({
-      min: e.target.value,
-      sec: 0,
-      button: 'play'
-    })
-  }
+
+  // change timer to what the user asks it to be NOT USED ANYMORE
+
+  // setC = (e) => {
+  //   this.setState({
+  //     min: e.target.value,
+  //     sec: 0,
+  //     button: 'play'
+  //   })
+  // }
+
+
+  // begin the timer
 
   startC = () => {
     let curMin = this.state.min
+
+    //set butten to stop to stop timer
+
     this.setState({
       min: curMin,
       sec: 0,
       button: 'stop'
     })
+
+    // change state every second
+
     this.interval = setInterval(() => {
+
+      //change min if seconds hit 0
 
       if(this.state.sec === 0 && this.state.min !== 0){
         let nextMin = this.state.min - 1
@@ -33,10 +49,15 @@ class App extends Component {
           sec: nextSec,
           button: 'stop'
         })
+
+        // start stop function when min = 0 and sec = 0
+
       } else if (this.state.sec === 0 && this.state.min === 0) {
 
         this.stopC();
         alert('HEY. TIMER ENDED');
+
+        // just continue timer
 
       } else {
         let nextMin = this.state.min
@@ -51,6 +72,10 @@ class App extends Component {
     }, 1000);
   }
 
+
+
+  // stop timer
+
   stopC = () => {
     clearInterval(this.interval);
     this.setState({
@@ -62,6 +87,8 @@ class App extends Component {
   }
 
 
+
+// curent change (set) counter
 
 changeC = (e) => {
   let curMin = this.state.min
